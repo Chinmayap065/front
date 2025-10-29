@@ -1,0 +1,96 @@
+.navbar {
+  background: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  font-size: 1.875rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-purple-primary), var(--color-purple-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.navLogo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.5));
+}
+
+.navLinks {
+  display: none; /* Hidden on mobile */
+}
+@media (min-width: 768px) { /* md breakpoint */
+  .navLinks {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+.navLinks a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.navLinks a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-purple-primary), var(--color-purple-secondary));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.navLinks a:hover::before {
+  width: 80%;
+}
+.navLinks a:hover {
+  color: var(--color-text-primary);
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.navAuth {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.navUsername {
+  color: var(--color-text-secondary);
+  display: none; /* Hide on mobile */
+}
+@media (min-width: 640px) { /* sm breakpoint */
+  .navUsername { display: block; }
+}
+
+/* Specific button styles for nav */
+.navAuth .btn-secondary {
+  color: var(--color-text-secondary);
+  border: none;
+}
+.navAuth .btn-secondary:hover {
+  background: none;
+  color: var(--color-text-primary);
+}

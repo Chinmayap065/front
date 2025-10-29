@@ -1,0 +1,177 @@
+.itineraryPage {
+  max-width: 56rem; /* 3xl */
+  opacity: 0; /* Animated by JS */
+}
+
+.itineraryTitle {
+  font-size: 2.25rem; /* 3xl */
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, var(--color-purple-secondary), var(--color-purple-primary));
+  
+  -webkit-text-fill-color: transparent;
+}
+
+.contextBox {
+  background: var(--color-bg-medium);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+}
+.contextTitle {
+  font-size: 1.25rem; /* xl */
+  font-weight: 600;
+  color: var(--color-purple-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.contextGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  font-size: 0.875rem; /* sm */
+}
+@media (min-width: 768px) {
+  .contextGrid { grid-template-columns: repeat(2, 1fr); }
+}
+.contextGrid h4 {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+.contextGrid p {
+  color: var(--color-text-secondary);
+  white-space: pre-line; /* Respects newlines from weather API */
+}
+
+/* Travel Options */
+.travelOptionsBox {
+  background: rgba(31, 41, 55, 0.6);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.travelOptionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.travelOptionCard {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.travelOptionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
+}
+
+.travelOptionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-blue-link);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.travelOptionDetails p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.travelOptionDetails strong {
+  color: var(--color-text-primary);
+}
+
+/* --- Daily Plan Cards --- */
+.plansContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dayCard {
+  background: var(--color-bg-medium);
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  opacity: 0; /* Animated by JS */
+}
+.dayCardHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(0,0,0,0.1);
+}
+.dayCardTitle {
+  font-size: 1.5rem; /* 2xl */
+  font-weight: 700;
+  color: var(--color-purple-secondary);
+}
+.dayCardBody {
+  padding: 1.5rem;
+}
+.dayCardNarrative {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+.itemSection {
+  margin-bottom: 1.5rem;
+}
+.itemTitle {
+  font-size: 1.125rem; /* lg */
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.itemListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-bg-dark);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+.itemListItem span {
+  font-weight: 500;
+}
+.itemLinks {
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+.itemLinks a {
+  color: var(--color-blue-link);
+  text-decoration: none;
+  font-size: 0.875rem; /* sm */
+  margin-left: 0.75rem;
+  transition: color 0.3s;
+}
+.itemLinks a:hover {
+  color: var(--color-purple-secondary);
+  text-decoration: underline;
+}
+.transportText {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}

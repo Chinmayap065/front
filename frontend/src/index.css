@@ -1,0 +1,191 @@
+/* --- Global Styles & Futuristic Theme --- */
+
+/* 1. CSS Variables (Colors from your PPT) */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-bg-dark: #030712;      /* Darkest background */
+  --color-bg-medium: #111827;   /* Medium background (cards) */
+  --color-bg-light: #1f2937;    /* Lighter background (inputs) */
+  --color-border: #374151;      /* Borders */
+  --color-text-primary: #f3f4f6;   /* Main text */
+  --color-text-secondary: #9ca3af; /* Sub-text, placeholders */
+  --color-purple-primary: #7c3aed;  /* Buttons (from PPT) */
+  --color-purple-secondary: #a78bfa; /* Logo, highlights */
+  --color-blue-link: #60a5fa;      /* Links */
+  --color-error: #f87171;         /* Error messages */
+  --color-success: #4ade80;       /* Success messages */
+
+  /* Glassmorphism Effect */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-backdrop-blur: blur(12px);
+  --glass-border: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+/* 2. Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: 
+    linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(96, 165, 250, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+main {
+  min-height: calc(100vh - 150px); /* Full height minus approx header/footer */
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 3. Global Components */
+.btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+.btn:hover::before {
+  left: 100%;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-purple-primary), var(--color-purple-secondary));
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+.btn-secondary {
+  background: rgba(31, 41, 55, 0.8);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+.btn-secondary:hover {
+  background: rgba(31, 41, 55, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* For form inputs */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(31, 41, 55, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-text-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+.form-input::placeholder { 
+  color: var(--color-text-secondary); 
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-purple-secondary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
+  background: rgba(31, 41, 55, 0.9);
+  transform: translateY(-1px);
+}
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 1.25rem; height: 1.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 2px solid #fff;
+  border-right: 2px solid transparent;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Message Cards */
+.message-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.message-card-error { background-color: rgba(239, 68, 68, 0.1); border: 1px solid var(--color-error); color: var(--color-error); }
+.message-card-success { background-color: rgba(34, 197, 94, 0.1); border: 1px solid var(--color-success); color: var(--color-success); }
+.message-card-info { background-color: rgba(59, 130, 246, 0.1); border: 1px solid var(--color-blue-link); color: var(--color-blue-link); }
+
+/* Fix date input styling */
+input[type="date"] { color-scheme: dark; }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+  cursor: pointer;
+}
