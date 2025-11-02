@@ -3,8 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import anime from 'animejs';
 import styles from './SearchBar.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api";
+import { API_URL } from '../config/api';
 
 function SearchBar({ onSearchStart, onSearchSuccess, onSearchError }) {
   const { token, isLoggedIn, logout } = useAuth(); // Get token and login state

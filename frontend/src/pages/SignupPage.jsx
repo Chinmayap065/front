@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './AuthForm.module.css'; // Shared styles
 import axios from 'axios';
-
-const API_URL = "http://127.0.0.1:5000/api";
+import { API_URL } from '../config/api';
 
 // Reusable Message Component
 const MessageCard = ({ message, type = 'info' }) => {
