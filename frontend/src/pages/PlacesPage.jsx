@@ -12,88 +12,97 @@ const PlacesPage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   // Dynamic places data that refreshes
-  const allPlaces = [
-    {
-      id: 1,
-      name: "Goa",
-      image: "https://stock.adobe.com/search?k=goa", // Basilica of Bom Jesus, Goa
-      description: "Sun-kissed beaches, vibrant nightlife, and Portuguese heritage",
-      highlights: ["Beaches", "Nightlife", "Heritage Sites"],
-      bestTime: "Nov - Mar",
-      duration: "3-5 days",
-      budget: "₹15,000 - ₹25,000"
-    },
-    {
-      id: 2,
-      name: "Kerala",
-      image: "https://w0.peakpx.com/wallpaper/355/655/HD-wallpaper-kettuvallam-houseboat-kerala-india-asia-k-kerala-india-india-asia-kerala-landscape.jpg", // Kerala backwaters
-      description: "Backwaters, hill stations, and rich cultural experiences",
-      highlights: ["Backwaters", "Hill Stations", "Ayurveda"],
-      bestTime: "Oct - Mar",
-      duration: "5-7 days",
-      budget: "₹20,000 - ₹35,000"
-    },
-    {
-      id: 3,
-      name: "Rajasthan",
-      image: "https://www.wallpaperflare.com/search?wallpaper=rajasthan", // Hawa Mahal, Jaipur
-      description: "Royal palaces, desert landscapes, and colorful festivals",
-      highlights: ["Palaces", "Desert", "Festivals"],
-      bestTime: "Oct - Mar",
-      duration: "7-10 days",
-      budget: "₹25,000 - ₹40,000"
-    },
-    {
-      id: 4,
-      name: "Himachal Pradesh",
-      image: "https://www.gettyimages.in/photos/himachal-pradesh",
-      description: "Snow-capped mountains, adventure sports, and serene valleys",
-      highlights: ["Mountains", "Adventure", "Temples"],
-      bestTime: "Apr - Jun, Sep - Nov",
-      duration: "5-8 days",
-      budget: "₹18,000 - ₹30,000"
-    },
-    {
-      id: 5,
-      name: "Karnataka",
-      image: "https://stock.adobe.com/search?k=karnataka", // Hampi, Karnataka
-      description: "Ancient temples, coffee plantations, and tech hubs",
-      highlights: ["Temples", "Coffee", "Wildlife"],
-      bestTime: "Oct - Mar",
-      duration: "4-6 days",
-      budget: "₹12,000 - ₹22,000"
-    },
-    {
-      id: 6,
-      name: "Tamil Nadu",
-      image: "https://www.shutterstock.com/video/search/tamil-nadu-drawing", // Meenakshi Amman Temple, Madurai
-      description: "Dravidian architecture, classical dance, and coastal beauty",
-      highlights: ["Temples", "Dance", "Coast"],
-      bestTime: "Oct - Mar",
-      duration: "6-8 days",
-      budget: "₹15,000 - ₹28,000"
-    },
-    {
-      id: 7,
-      name: "Ladakh",
-      image: "https://www.istockphoto.com/photos/leh-ladakh",
-      description: "High-altitude desert, Buddhist monasteries, and stunning landscapes",
-      highlights: ["Monasteries", "Lakes", "Adventure"],
-      bestTime: "May - Sep",
-      duration: "6-10 days",
-      budget: "₹30,000 - ₹50,000"
-    },
-    {
-      id: 8,
-      name: "Sikkim",
-      image: "https://stock.adobe.com/search?k=sikkim", // Sikkim landscape
-      description: "Himalayan beauty, Buddhist culture, and pristine nature",
-      highlights: ["Mountains", "Culture", "Nature"],
-      bestTime: "Mar - May, Sep - Nov",
-      duration: "5-7 days",
-      budget: "₹20,000 - ₹35,000"
-    }
-  ];
+// Dynamic places data that refreshes
+const allPlaces = [
+  {
+    id: 1,
+    name: "Goa",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1570228053625-24eac9c381f2?q=80&w=1974&auto=format&fit=crop", // Goa beach
+    description: "Sun-kissed beaches, vibrant nightlife, and Portuguese heritage",
+    highlights: ["Beaches", "Nightlife", "Heritage Sites"],
+    bestTime: "Nov - Mar",
+    duration: "3-5 days",
+    budget: "₹15,000 - ₹25,000"
+  },
+  {
+    id: 2,
+    name: "Kerala",
+    // --- This link was already correct ---
+    image: "https://w0.peakpx.com/wallpaper/355/655/HD-wallpaper-kettuvallam-houseboat-kerala-india-asia-k-kerala-india-india-asia-kerala-landscape.jpg", // Kerala backwaters
+    description: "Backwaters, hill stations, and rich cultural experiences",
+    highlights: ["Backwaters", "Hill Stations", "Ayurveda"],
+    bestTime: "Oct - Mar",
+    duration: "5-7 days",
+    budget: "₹20,000 - ₹35,000"
+  },
+  {
+    id: 3,
+    name: "Rajasthan",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1544974100-3331201a063b?q=80&w=2070&auto=format&fit=crop", // Hawa Mahal, Jaipur
+    description: "Royal palaces, desert landscapes, and colorful festivals",
+    highlights: ["Palaces", "Desert", "Festivals"],
+    bestTime: "Oct - Mar",
+    duration: "7-10 days",
+    budget: "₹25,000 - ₹40,000"
+  },
+  {
+    id: 4,
+    name: "Himachal Pradesh",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1626621281439-8f0888636258?q=80&w=2070&auto=format&fit=crop", // Himachal mountains
+    description: "Snow-capped mountains, adventure sports, and serene valleys",
+    highlights: ["Mountains", "Adventure", "Temples"],
+    bestTime: "Apr - Jun, Sep - Nov",
+    duration: "5-8 days",
+    budget: "₹18,000 - ₹30,000"
+  },
+  {
+    id: 5,
+    name: "Karnataka",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1590212151086-258f921f375c?q=80&w=2070&auto=format&fit=crop", // Hampi, Karnataka
+    description: "Ancient temples, coffee plantations, and tech hubs",
+    highlights: ["Temples", "Coffee", "Wildlife"],
+    bestTime: "Oct - Mar",
+    duration: "4-6 days",
+    budget: "₹12,000 - ₹22,000"
+  },
+  {
+    id: 6,
+    name: "Tamil Nadu",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1582662053913-c601452140a3?q=80&w=2070&auto=format&fit=crop", // Meenakshi Amman Temple, Madurai
+    description: "Dravidian architecture, classical dance, and coastal beauty",
+    highlights: ["Temples", "Dance", "Coast"],
+    bestTime: "Oct - Mar",
+    duration: "6-8 days",
+    budget: "₹15,000 - ₹28,000"
+  },
+  {
+    id: 7,
+    name: "Ladakh",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1581794439117-ba51547806b1?q=80&w=2070&auto=format&fit=crop", // Thiksey Monastery, Ladakh
+    description: "High-altitude desert, Buddhist monasteries, and stunning landscapes",
+    highlights: ["Monasteries", "Lakes", "Adventure"],
+    bestTime: "May - Sep",
+    duration: "6-10 days",
+    budget: "₹30,000 - ₹50,000"
+  },
+  {
+    id: 8,
+    name: "Sikkim",
+    // --- FIXED IMAGE LINK ---
+    image: "https://images.unsplash.com/photo-1579789398867-2681c6e1043b?q=80&w=1974&auto=format&fit=crop", // Rumtek Monastery, Sikkim
+    description: "Himalayan beauty, Buddhist culture, and pristine nature",
+    highlights: ["Mountains", "Culture", "Nature"],
+    bestTime: "Mar - May, Sep - Nov",
+    duration: "5-7 days",
+    budget: "₹20,000 - ₹35,000"
+  }
+];
 
   // Function to shuffle and refresh places
   const refreshPlaces = () => {
