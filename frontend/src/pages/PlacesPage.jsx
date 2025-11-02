@@ -16,7 +16,7 @@ const PlacesPage = () => {
     {
       id: 1,
       name: "Goa",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2070&auto=format&fit=crop", // Basilica of Bom Jesus, Goa
+      image: "https://stock.adobe.com/search?k=goa", // Basilica of Bom Jesus, Goa
       description: "Sun-kissed beaches, vibrant nightlife, and Portuguese heritage",
       highlights: ["Beaches", "Nightlife", "Heritage Sites"],
       bestTime: "Nov - Mar",
@@ -26,7 +26,7 @@ const PlacesPage = () => {
     {
       id: 2,
       name: "Kerala",
-      image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=2070&auto=format&fit=crop", // Kerala backwaters
+      image: "https://w0.peakpx.com/wallpaper/355/655/HD-wallpaper-kettuvallam-houseboat-kerala-india-asia-k-kerala-india-india-asia-kerala-landscape.jpg", // Kerala backwaters
       description: "Backwaters, hill stations, and rich cultural experiences",
       highlights: ["Backwaters", "Hill Stations", "Ayurveda"],
       bestTime: "Oct - Mar",
@@ -36,7 +36,7 @@ const PlacesPage = () => {
     {
       id: 3,
       name: "Rajasthan",
-      image: "https://images.unsplash.com/photo-1544986581-efac024faf62?q=80&w=2071&auto=format&fit=crop", // Hawa Mahal, Jaipur
+      image: "https://www.wallpaperflare.com/search?wallpaper=rajasthan", // Hawa Mahal, Jaipur
       description: "Royal palaces, desert landscapes, and colorful festivals",
       highlights: ["Palaces", "Desert", "Festivals"],
       bestTime: "Oct - Mar",
@@ -46,7 +46,7 @@ const PlacesPage = () => {
     {
       id: 4,
       name: "Himachal Pradesh",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop",
+      image: "https://www.gettyimages.in/photos/himachal-pradesh",
       description: "Snow-capped mountains, adventure sports, and serene valleys",
       highlights: ["Mountains", "Adventure", "Temples"],
       bestTime: "Apr - Jun, Sep - Nov",
@@ -56,7 +56,7 @@ const PlacesPage = () => {
     {
       id: 5,
       name: "Karnataka",
-      image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=2070&auto=format&fit=crop", // Hampi, Karnataka
+      image: "https://stock.adobe.com/search?k=karnataka", // Hampi, Karnataka
       description: "Ancient temples, coffee plantations, and tech hubs",
       highlights: ["Temples", "Coffee", "Wildlife"],
       bestTime: "Oct - Mar",
@@ -66,7 +66,7 @@ const PlacesPage = () => {
     {
       id: 6,
       name: "Tamil Nadu",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2070&auto=format&fit=crop", // Meenakshi Amman Temple, Madurai
+      image: "https://www.shutterstock.com/video/search/tamil-nadu-drawing", // Meenakshi Amman Temple, Madurai
       description: "Dravidian architecture, classical dance, and coastal beauty",
       highlights: ["Temples", "Dance", "Coast"],
       bestTime: "Oct - Mar",
@@ -76,7 +76,7 @@ const PlacesPage = () => {
     {
       id: 7,
       name: "Ladakh",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop",
+      image: "https://www.istockphoto.com/photos/leh-ladakh",
       description: "High-altitude desert, Buddhist monasteries, and stunning landscapes",
       highlights: ["Monasteries", "Lakes", "Adventure"],
       bestTime: "May - Sep",
@@ -86,7 +86,7 @@ const PlacesPage = () => {
     {
       id: 8,
       name: "Sikkim",
-      image: "https://images.unsplash.com/photo-1589308078054-8322b35d1b47?q=80&w=2070&auto=format&fit=crop", // Sikkim landscape
+      image: "https://stock.adobe.com/search?k=sikkim", // Sikkim landscape
       description: "Himalayan beauty, Buddhist culture, and pristine nature",
       highlights: ["Mountains", "Culture", "Nature"],
       bestTime: "Mar - May, Sep - Nov",
